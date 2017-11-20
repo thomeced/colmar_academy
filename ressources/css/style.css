@@ -1,0 +1,526 @@
+/*Colmar Academy StyleSheet*/
+
+/*
+mediaqueries
+animation ( ease transparency; photo effect, move icon )
+video background ( crazy shit)
+extras : forms , call to actions , scroll back to top ?
+colors choice : kuler
+factorize css attributes;
+*/
+
+
+/***** TABLE OF CONTENTS *****/
+
+/*COMMON STYLES AND COMMON POSITIONNING*/
+/*HEADER & FOOTER*/
+/*BANNER*/
+/*INFORMATIONS & EXHIBITS */
+/*COURSES */
+/*FOOTER*/
+/*RESPONSIVE*/
+
+
+/*COMMON STYLES AND COMMON POSITIONNING*/
+*{
+  box-sizing: border-box;
+  word-spacing: .1em;
+}
+
+html{
+  font-size: 1rem; /* TODO maybe not best practices... to check... */
+}
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  color: #333;
+  background-color: #F5F5F5;
+}
+
+h1, h2 {
+  font-weight: 900;
+  font-family:  'Playfair Display', serif;
+  margin: 2rem 0 0.75rem 0;
+  color: #333;
+  line-height: 1.1;
+}
+
+h3, h4, h5 {
+  font-weight: 700;
+  margin: 0 0 0.75rem 0;
+  color: #555;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 2.25rem;
+}
+h2 {
+  font-size: 1.625rem;
+}
+h3 {
+  font-size: 1.125rem;
+}
+h4 {
+   font-size: 1rem;
+
+}
+
+p {
+  font-size: .8rem;
+  line-height: 1.4;
+  padding-right: 2rem;
+   } /* TODO Check if rem or em here */
+
+section {
+  padding: 2rem 0 2rem 1.5rem;
+}
+
+h2.sectiontitle:after, h2.sectiontitle:before {
+  background-color: #fff;
+  content: "";
+  display: inline-block;
+  height: 2px;
+  position: relative;
+  vertical-align: middle;
+  width: 10%;
+}
+h2.sectiontitle:after{
+  left: 15px;
+}
+h2.sectiontitle:before{
+  right: 15px;
+}
+
+
+
+
+.col-60 {
+  width: 60%;
+}
+.col-40 {
+  width: 40%;
+}
+.col-35 {
+  width: 35%;
+}
+
+.image-container {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.image-container img, .image-container video {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+.main {
+  position: relative;
+  top: 4rem;
+}
+
+article .mobile-display {
+  display: none;
+}
+
+/*HEADER & FOOTER*/
+
+header {
+  position: fixed;
+  z-index:10;
+  background-color: #fff;
+  box-shadow: 0px 3px 10px 0px rgba(150, 150, 150, 0.4);
+}
+
+header, footer {
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.5rem;
+}
+
+nav #menu-mobile {
+  display: none;
+ }
+
+header nav ul, footer nav ul {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+ }
+
+header nav ul li, footer nav ul li {
+
+  margin-left: 1rem;
+}
+
+header nav ul li a, footer nav ul li a {
+  text-decoration: none;
+  transition-property: color;
+  transition-duration: 300ms;
+  transition-timing-function: ease-in-out;
+  color: #333;
+  font-weight: 400;
+}
+header nav ul li a:hover, footer nav ul li a:hover {
+  color: #3a6e97;
+}
+
+div.logo {
+  display: flex;
+  align-items: center;
+  /*width: 50%;*/
+}
+
+div.logo img {
+  height: 2.5rem;
+}
+div.logo div {
+  font-size: 1.4rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.5);
+  letter-spacing: -0.05em;
+}
+div.logo span {
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  color: rgba(0, 0, 0, 1);
+}
+
+/*BANNER*/
+
+section.banner {
+  display: inline-flex;
+  width: 100%;
+  background-color: #677687;
+}
+
+section.banner .banner-content {
+  padding:0 1.5rem 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center
+}
+
+section.banner a.button {
+  display: inline-block;
+  text-decoration:none;
+  text-align: center;
+  padding: 0.5rem;
+  margin: 1rem 1rem 0 0;
+  font-weight: 800;
+  color: white;
+  background-color: #333;
+  border-radius: 2px;
+  transition: all 200ms;
+  font-size: 1rem;
+}
+section.banner .button:hover {
+   background-color: #42505f;
+}
+
+.banner h1 {
+color:#fff;
+}
+
+.banner h4 {
+  color:#e6e6e6;
+}
+
+/*INFORMATIONS & EXHIBITS */
+
+section.informations, section.exhibits div.flex {
+  display: flex;
+  width: 100%;
+}
+
+section.exhibits {
+  padding-top: 0;
+}
+section.exhibits h2 {
+  margin-bottom: 2rem; /* cancelling out main h2 margin-bootom*/
+}
+
+section.exhibits video {
+  margin-bottom: 1.5rem; /* cancelling out main h2 margin-bootom*/
+}
+
+div.articles  {
+  padding-left: 1.5rem;
+
+}
+div.articles .article  {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 1rem 1rem;
+  border-bottom: 1px solid #ffffff;
+}
+
+div.articles .article:first-child  {
+   padding: 0rem 1rem 1rem 1rem ;
+}
+
+div.articles .article img  {
+  padding-right: 1rem;
+}
+div.articles .article-content  {
+  width: 65%;
+}
+
+div.articles .article:nth-child(1n+3) { /* TODO factorize with exibit hover + transition behaviour */
+  background-color: #d9d9d9;
+  transition-property: background-color;
+  transition-duration: 200ms;
+  transition-timing-function: ease-in-out;
+}
+
+div.articles .article:nth-child(1n+3):hover  { /* TODO factorize with exibit hover + transition behaviour */
+  background-color: #fff;
+}
+
+div.articles .article:hover  {
+  background-color: #eee;
+}
+
+.testimonial:before {
+  font-family: FontAwesome;
+  content: "\f10d";
+  font-size: 2em;
+  color: rgba(0, 0, 0, 0.2);
+  padding-right: 10px
+}
+
+.author {
+  color: #000;
+  opacity:0.7;
+  margin-top: 1.5rem;
+  text-align: right;
+  font-style: italic;
+}
+
+a.readmore {
+  font-size: 1rem;
+  color: #69a4d3;
+  text-decoration: none;
+  padding-top:0.5rem;
+  display: inline-block;
+  font-weight: 700;
+}
+
+a.readmore:hover {
+  color: #3a6e97;
+}
+
+/*COURSES*/
+section.courses {
+  display: flex;
+  width: 100%;
+  background-color: #e5cb9a;
+  padding: 0 3.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.courses h2, .exhibits h2 {
+  width: 100%;
+  text-align: center;
+}
+
+.courses .course-type {
+  font-weight: 300;
+  margin : 0.5rem 0 0.5rem 0;
+  text-transform: uppercase;
+}
+
+.course {
+  width: 30%;
+  margin : 1rem; /* not working... */
+  background-color: #FFF;
+}
+
+.course img {
+  transform: scale(1);
+  transition: all 100ms ease-in;
+}
+
+.course img:hover, .course img:active   {
+  background-color: #ccc;
+  box-shadow: 0px 0px 10px 2px rgba(150, 150, 150, 0.4);
+  transform: scale(1.05);
+  opacity: 0.8;
+  background-color: #f5F5F5;
+}
+
+
+.course .article-content {
+  padding:1rem 1rem 1.5rem 1rem;
+}
+
+section.courses .course h3 a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/*FOOTER*/
+
+footer {
+  border-top: 1px solid #CCC;
+}
+footer nav i {
+  color: #aaa;
+  transition: color 100ms ease-in;
+}
+
+footer nav i:hover {
+  color: #3a6e97;
+  transform: scale(1.02);
+}
+
+/*RESPONSIVE*/
+
+@media only screen and (max-width: 1090px){
+  section.courses .course {
+    width: 28%;
+
+}
+
+@media only screen and (max-width: 800px){
+
+  nav #menu {
+    display: none;
+  }
+  nav #menu-mobile {
+    display: flex;
+
+  }
+  nav #menu-mobile li  {
+    margin-left: 2rem;
+  }
+
+  section.courses .course {
+    width: 44%;
+
+}
+
+
+}
+
+
+@media only screen and (max-width: 480px){
+
+
+  div.logo div {
+    width: 20%;
+  }
+  div.logo div {
+    display: none;
+  }
+
+  nav #menu-mobile li  {
+    margin-left: 1rem;
+  }
+  section {
+    padding: 0 0 2rem 0;
+  }
+  section.banner {
+    display: inline-flex;
+    flex-direction: column;
+  }
+  .col-60 {
+    width:100%;
+  }
+  .col-40 {
+    width: 100%;
+  }
+  .col-35 {
+    width: 100%;
+  }
+
+  .information-main {
+    display:none;
+  }
+
+
+
+
+  div.articles {
+    padding-left: 0;
+  }
+  div.articles .article:first-child  {
+     padding: 1rem ;
+  }
+  div.articles .article {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 1rem 1rem;
+    border-bottom: 1px solid #ffffff;
+  }
+  div.articles .article img {
+      padding-right: 0rem;
+  }
+
+  article .mobile-display {
+    display: inline-block;
+   }
+  article .desktop-display {
+    display: none;
+
+  }
+  div.articles .article-content {
+    padding: 1rem;
+    width: 100%;
+  }
+
+  section.courses {
+    width: 100%;
+    padding: 0;
+    background-color: #e5cb9a;
+   }
+  section.courses .course {
+    width: 100%;
+    background-color: #FFF;
+    margin: 0.5rem 1rem 0.5rem 1rem
+  }
+
+  section.courses .course h3 {
+    margin:0;
+  }
+
+/*a bit bloaty here,
+but check out my clever use of pseudo classes
+ at the end for the the exhibit section (~‾▿‾)~ */
+  section.courses .course .image-container,
+  section.courses .course .course-type,
+  section.courses .course p {
+    display: none;
+  }
+
+  .course .article-content {
+    padding: 1.5rem;
+
+}
+
+/* found this one by myself \o/
+ Dunno if it's ugly but made me feel
+ a bit more clever than usual :) */
+article.exhibits-main > *:not(:first-child) {
+  display: none;
+ }
+
+ .exhibits-articles {
+    display:none;
+  }
+
+ footer nav{
+   display: none;
+ }
+
+}
