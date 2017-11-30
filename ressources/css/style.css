@@ -67,7 +67,7 @@ h4 {
 }
 
 p {
-  font-size: .8rem;
+  /*font-size: .8rem;*/
   line-height: 1.4;
   padding-right: 2rem;
    } /* TODO Check if rem or em here */
@@ -345,7 +345,7 @@ section.courses {
 }
 
 .course img {
-  transform: scale(1);
+  width: 100%; 
   transition: all 100ms ease-in;
 }
 
